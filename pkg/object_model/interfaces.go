@@ -1,12 +1,13 @@
 package object_model
 
+//LinkManager 链接管理接口
 type LinkManager interface {
 	GetLinks(request GetLinksRequest) (GetLinksResult, error)
 	AddLink(request AddLinkRequest) error
 	UpdateLink(request UpdateLinkRequest) error
 	DeleteLink(username string, url string) error
 }
-
+//UserManager 用户管理接口
 type UserManager interface {
 	Register(user User) error
 	Login(username string, authToken string) (session string, err error)
