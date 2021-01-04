@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 )
-
+//添加一行注释
 func initDB() {
 	db, err := db_util.RunLocalDB("link_manager")
 	Check(err)
