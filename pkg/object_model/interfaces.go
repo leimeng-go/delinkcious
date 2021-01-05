@@ -13,7 +13,7 @@ type UserManager interface {
 	Login(username string, authToken string) (session string, err error)
 	Logout(username string, session string) error
 }
-
+//SocialGraphManager 社交图谱管理接口
 type SocialGraphManager interface {
 	Follow(followed string, follower string) error
 	Unfollow(followed string, follower string) error
@@ -25,11 +25,11 @@ type SocialGraphManager interface {
 	//RejectFollowRequest(followed string, follower string) error
 	//KickFollower(followed string, follower string) error
 }
-
+//NewsManager 新闻管理接口
 type NewsManager interface {
 	GetNews(request GetNewsRequest) (GetNewsResult, error)
 }
-
+//LinkManagerEvents 
 type LinkManagerEvents interface {
 	OnLinkAdded(username string, link *Link)
 	OnLinkUpdated(username string, link *Link)
