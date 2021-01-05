@@ -29,13 +29,13 @@ type SocialGraphManager interface {
 type NewsManager interface {
 	GetNews(request GetNewsRequest) (GetNewsResult, error)
 }
-//LinkManagerEvents 
+//LinkManagerEvents 链接管理回调
 type LinkManagerEvents interface {
 	OnLinkAdded(username string, link *Link)
 	OnLinkUpdated(username string, link *Link)
 	OnLinkDeleted(username string, url string)
 }
-
+//LinkCheckerEvents 链接检查回调
 type LinkCheckerEvents interface {
 	OnLinkChecked(username string, url string, status LinkStatus)
 }
