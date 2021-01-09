@@ -3,9 +3,6 @@ jobs:
   build:
     docker:
     - image: circleci/golang:latest
-    - image: circleci/postgres:latest
-      environment: # environment variables for primary container
-        POSTGRES_USER: postgres
     working_directory: /go/src/github.com/pingguodeli573365/delinkcious
     steps:
     - checkout
@@ -15,9 +12,6 @@ jobs:
           go get -v ./...
           go get -u github.com/onsi/ginkgo/ginkgo
           go get -u github.com/onsi/gomega/...
-    - run:
-        name: Test everything
-        command: ginkgo -r -race -failFast -progress
     - setup_remote_docker:
     - run:
         name: build and push Docker images
