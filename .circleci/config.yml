@@ -19,7 +19,7 @@ jobs:
         name: Test everything
         command: ginkgo -r -race -failFast -progress
     - setup_remote_docker:
-        docker_layer_caching: true
+        docker_layer_caching: false
     - run:
         name: build and push Docker images
         shell: /bin/bash
