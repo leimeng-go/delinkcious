@@ -3,9 +3,6 @@ jobs:
   build:
     docker:
     - image: circleci/golang:latest
-      auth:
-        username: $DOCKERHUB_USERNAME
-        password: $DOCKERHUB_PASSWORD
     working_directory: /go/src/github.com/pingguodeli573365/delinkcious
     steps:
     - checkout
