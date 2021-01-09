@@ -9,7 +9,7 @@ TAG="${STABLE_TAG}.${CIRCLE_BUILD_NUM}"
 ROOT_DIR="$(pwd)"
 SVC_DIR="${ROOT_DIR}/svc"
 cd $SVC_DIR
-docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}
 for svc in *; do
     cd "${SVC_DIR}/$svc"
     if [[ ! -f Dockerfile ]]; then
