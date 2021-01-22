@@ -2,8 +2,9 @@ package social_graph_manager
 
 import (
 	"errors"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
 	"log"
+
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
 )
 
 type SocialGraphManager struct {

@@ -3,7 +3,7 @@ package link_manager
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
 )
 
 var _ = Describe("In-memory link manager tests", func() {

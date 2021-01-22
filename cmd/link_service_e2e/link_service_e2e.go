@@ -2,14 +2,16 @@ package main
 
 import (
 	"context"
-	_ "github.com/lib/pq"
-	"github.com/the-gigi/delinkcious/pkg/db_util"
-	"github.com/the-gigi/delinkcious/pkg/link_manager_client"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
-	. "github.com/the-gigi/delinkcious/pkg/test_util"
 	"log"
 	"os"
+
+	_ "github.com/lib/pq"
+	"github.com/pingguodeli573365/delinkcious/pkg/db_util"
+	"github.com/pingguodeli573365/delinkcious/pkg/link_manager_client"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
+	. "github.com/pingguodeli573365/delinkcious/pkg/test_util"
 )
+
 //添加一行注释
 func initDB() {
 	db, err := db_util.RunLocalDB("link_manager")
@@ -67,7 +69,7 @@ func main() {
 	log.Print("gigi's links:", links)
 
 	err = cli.AddLink(om.AddLinkRequest{Username: "gigi",
-		Url:   "https://github.com/the-gigi",
+		Url:   "https://github.com/pingguodeli573365",
 		Title: "Gigi on Github",
 		Tags:  map[string]bool{"programming": true}})
 	Check(err)
@@ -76,7 +78,7 @@ func main() {
 	log.Print("gigi's links:", links)
 
 	err = cli.UpdateLink(om.UpdateLinkRequest{Username: "gigi",
-		Url:         "https://github.com/the-gigi",
+		Url:         "https://github.com/pingguodeli573365",
 		Description: "Most of my open source code is here"},
 	)
 
@@ -85,7 +87,7 @@ func main() {
 	Check(err)
 	log.Print("gigi's links:", links)
 
-	err = cli.DeleteLink("gigi", "https://github.com/the-gigi")
+	err = cli.DeleteLink("gigi", "https://github.com/pingguodeli573365")
 	Check(err)
 	Check(err)
 	links, err = cli.GetLinks(om.GetLinksRequest{Username: "gigi"})

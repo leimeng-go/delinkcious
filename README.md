@@ -49,7 +49,7 @@ Test Suite Passed
 
 For CI check out the .circleci file and build.sh
 
-See https://circleci.com/gh/the-gigi/delinkcious/tree/master for status
+See https://circleci.com/gh/pingguodeli573365/delinkcious/tree/master for status
 
 For CD type: `kubectl port-forward -n argocd svc/argocd-server 8080:443`
 

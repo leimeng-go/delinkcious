@@ -1,14 +1,8 @@
-FROM golang:1.11
+FROM golang:latest
 
-RUN go get github.com/the-gigi/delinkcious/...
+RUN git clone -b lm github.com/pingguodeli573365/delinkcious
 
-WORKDIR /go/src/github.com/the-gigi/delinkcious/svc/social_graph_service
-ADD ./main.go main.go
-
-# Fetch dependencies
-RUN go get -d -v
-
-ADD ./service service
+WORKDIR /go/src/github.com/pingguodeli573365/delinkcious/svc/social_graph_service
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /social_graph_service -a -tags netgo -ldflags '-s -w' .
 

@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
-	. "github.com/the-gigi/delinkcious/pkg/test_util"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -14,6 +12,9 @@ import (
 	"os/exec"
 	"strings"
 	"time"
+
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
+	. "github.com/pingguodeli573365/delinkcious/pkg/test_util"
 )
 
 var (
@@ -166,13 +167,13 @@ func main() {
 	getFollowing()
 
 	// Delete link
-	deleteLink("https://github.com/the-gigi")
+	deleteLink("https://github.com/pingguodeli573365")
 
 	// Get links
 	getLinks()
 
 	// Add a new link
-	addLink("https://github.com/the-gigi", "Gigi on Github")
+	addLink("https://github.com/pingguodeli573365", "Gigi on Github")
 
 	// Get links again
 	getLinks()

@@ -1,17 +1,19 @@
 version: 2
-jobs:
-  build:
-    docker:
+jobs: //基本工作单元
+  build: //不使用流水线必须使用`build`作为工作入口
+    docker: //使用docker运行步骤
     - image: circleci/golang:latest
+    - image: circleci/postgres:9.6-alpine
+      environment: 
+
     working_directory: /go/src/github.com/pingguodeli573365/delinkcious
     steps:
     - checkout
     - run:
         name: Get all dependencies
         command: |
-          go get -v ./...
-          go get -u github.com/onsi/ginkgo/ginkgo
-          go get -u github.com/onsi/gomega/...
+         go env -w GOPROXY=https://goproxy.cn
+         go mod tidy
     - setup_remote_docker:
     - run:
         name: build and push Docker images

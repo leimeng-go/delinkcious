@@ -3,10 +3,11 @@ package news_manager_client
 import (
 	"context"
 	"errors"
-	"github.com/go-kit/kit/endpoint"
-	"github.com/the-gigi/delinkcious/pb/news_service/pb"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
 	"time"
+
+	"github.com/go-kit/kit/endpoint"
+	"github.com/pingguodeli573365/delinkcious/pb/news_service/pb"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
 )
 
 type EndpointSet struct {

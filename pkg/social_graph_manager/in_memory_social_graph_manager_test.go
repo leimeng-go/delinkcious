@@ -3,7 +3,7 @@ package social_graph_manager
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
 )
 
 var _ = Describe("in-memory social graph manager tests", func() {

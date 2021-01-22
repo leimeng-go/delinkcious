@@ -1,12 +1,13 @@
 package link_manager
 
 import (
+	"log"
+
 	sq "github.com/Masterminds/squirrel"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/the-gigi/delinkcious/pkg/db_util"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
-	"log"
+	"github.com/pingguodeli573365/delinkcious/pkg/db_util"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
 )
 
 var _ = Describe("DB link store tests", func() {

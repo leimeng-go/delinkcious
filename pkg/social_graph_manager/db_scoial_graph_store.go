@@ -3,9 +3,10 @@ package social_graph_manager
 import (
 	"database/sql"
 	"errors"
+
 	sq "github.com/Masterminds/squirrel"
 	_ "github.com/lib/pq"
-	"github.com/the-gigi/delinkcious/pkg/db_util"
+	"github.com/pingguodeli573365/delinkcious/pkg/db_util"
 )
 
 type DbSocialGraphStore struct {

@@ -1,7 +1,7 @@
 package link_manager_events
 
 import (
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
 )
 
 func Listen(url string, sink om.LinkManagerEvents) (err error) {

@@ -14,12 +14,12 @@ import (
 	"github.com/uber/jaeger-client-go"
 	jeagerconfig "github.com/uber/jaeger-client-go/config"
 
-	"github.com/the-gigi/delinkcious/pkg/db_util"
-	lm "github.com/the-gigi/delinkcious/pkg/link_manager"
-	"github.com/the-gigi/delinkcious/pkg/link_manager_events"
-	"github.com/the-gigi/delinkcious/pkg/log"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
-	sgm "github.com/the-gigi/delinkcious/pkg/social_graph_client"
+	"github.com/pingguodeli573365/delinkcious/pkg/db_util"
+	lm "github.com/pingguodeli573365/delinkcious/pkg/link_manager"
+	"github.com/pingguodeli573365/delinkcious/pkg/link_manager_events"
+	"github.com/pingguodeli573365/delinkcious/pkg/log"
+	om "github.com/pingguodeli573365/delinkcious/pkg/object_model"
+	sgm "github.com/pingguodeli573365/delinkcious/pkg/social_graph_client"
 )
 
 type EventSink struct {
