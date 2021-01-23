@@ -1,10 +1,15 @@
 version: 2
-jobs: //基本工作单元
-  build: //不使用流水线必须使用`build`作为工作入口
+# 基本工作单元
+jobs:
+# 不使用流水线必须使用`build`作为工作入口
+  build:
+  # 使用docker运行步骤
     docker: //使用docker运行步骤
     - image: circleci/golang:latest
     - image: circleci/postgres:9.6-alpine
-      environment: 
+      environment: //设置 postgress容器中的环境变量
+        POSTGRES_USER: leimeng
+        
 
     working_directory: /go/src/github.com/pingguodeli573365/delinkcious
     steps:
