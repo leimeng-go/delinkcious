@@ -11,13 +11,13 @@ jobs:
       # environment: 
       #   POSTGRES_USER: leimeng
       #   POSTGRES_DB: circle_test      
-    working_directory: /home/leimeng/delinkcious
+    # working_directory: /home/leimeng/delinkcious
     steps:
     - checkout
     - run:
         name: Get all dependencies
-        command: |
-         go mod tidy
+        # command: |
+        #  go mod tidy
     - setup_remote_docker:
     - run:
         name: build and push Docker images
