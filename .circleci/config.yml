@@ -6,12 +6,12 @@ jobs:
   # 使用docker
     docker: 
     - image: circleci/golang:latest
-    - image: circleci/postgres:9.6-alpine
+    # - image: circleci/postgres:9.6-alpine
     # 设置postgress 容器中的环境变量
-      environment: 
-        POSTGRES_USER: leimeng
-        POSTGRES_DB: circle_test      
-    working_directory: /go/src/github.com/pingguodeli573365/delinkcious
+      # environment: 
+      #   POSTGRES_USER: leimeng
+      #   POSTGRES_DB: circle_test      
+    working_directory: /home/leimeng/delinkcious
     steps:
     - checkout
     - run:

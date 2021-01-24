@@ -1,15 +1,17 @@
-FROM golang:1.11
+FROM golang:latest
 
-RUN go get github.com/pingguodeli573365/delinkcious/...
+WORKDIR /home/link_service
 
-WORKDIR /go/src/github.com/pingguodeli573365/delinkcious/svc/link_service
 ADD ./main.go main.go
+ADD ./go.mod go.mod
 ADD ./service service
 
 # Fetch dependencies
-RUN go get -d -v
+ENV GOPROXY https://goproxy.cn
+ENV GO111MODULE on
+RUN go mod tidy
 
-
+#Build image as a truly static Go binary 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /link_service -a -tags netgo -ldflags '-s -w' .
 
 EXPOSE 8080

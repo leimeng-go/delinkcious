@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# 一旦出现返回值非零，整个脚本就会立即退出。
 set -eo pipefail
 
+# 镜像名称的前缀
 IMAGE_PREFIX='1955854667'
 STABLE_TAG='0.6'
 
