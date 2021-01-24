@@ -1,4 +1,3 @@
-#当前案例中没有使用go mod依赖模式，替换修改
 FROM golang:latest AS builder
 
 WORKDIR /delinkcious/social_graph_service
