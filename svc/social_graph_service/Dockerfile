@@ -1,5 +1,5 @@
 #当前案例中没有使用go mod依赖模式，替换修改
-FROM golang:latest AS build
+FROM golang:latest AS builder
 
 WORKDIR /delinkcious/social_graph_service
 
@@ -7,7 +7,7 @@ ADD ./main.go main.go
 ADD ./service service
 ADD ./go.mod go.mod
 #Fetch dependencies
-ENV GOPROXY https://goproxy.cn
+# ENV GOPROXY https://goproxy.cn
 ENV GO111MODULE on
 RUN go mod tidy
 

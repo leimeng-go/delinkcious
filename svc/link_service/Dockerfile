@@ -7,7 +7,7 @@ ADD ./service service
 ADD ./go.mod go.mod
 
 # Fetch dependencies
-ENV GOPROXY https://goproxy.cn
+# ENV GOPROXY https://goproxy.cn
 ENV GO111MODULE on
 ENV go mod tidy
 
