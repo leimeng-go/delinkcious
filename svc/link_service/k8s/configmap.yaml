@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: link-manager-config
-  namespace: default
+  namespace: delinkcious
 data:
   MAX_LINKS_PER_USER: "10"
   PORT: "8080"
