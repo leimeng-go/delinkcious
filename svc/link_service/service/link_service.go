@@ -60,7 +60,7 @@ func createTracer(service string) (opentracing.Tracer, io.Closer) {
 	return tracer, closer
 }
 
-func Run() {
+func  Run() {
 	dbHost, dbPort, err := db_util.GetDbEndpoint("link")
 	if err != nil {
 		log.Fatal(err)

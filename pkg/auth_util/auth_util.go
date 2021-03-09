@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 )
-
+ 
 const callersFilename = "/etc/delinkcious/mutual-auth.yaml"
 
 var callersByName = map[string]string{}

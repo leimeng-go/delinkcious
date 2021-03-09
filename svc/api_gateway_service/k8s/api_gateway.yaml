@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: api-gateway
-automountServiceAccountToken: false
+autom ountServiceAccountToken: false
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: g1g1/delinkcious-api-gateway:0.5
+        image: 1955854667/delinkcious-api-gateway
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
